@@ -5,7 +5,7 @@ LABEL maintainer="Antonio Poscic <aposcic@pm.me>"
 LABEL \
     org.opencontainers.image.authors="Antonio Poscic <aposcic@pm.me>" \
     org.opencontainers.image.title="aposcic/pipelines-node-jdk8" \
-    org.opencontainers.image.description="Bitbucket Pipelines image with Node.js and OpenJDK 8" \
+    org.opencontainers.image.description="Bitbucket Pipelines image with Node.js and OpenJDK 8"
 
 # Install OpenJDK 8
 RUN apt-get update \
@@ -18,7 +18,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install nvm with node and npm
 ENV NODE_VERSION=16.16.0 \
 NVM_DIR=/root/.nvm \
-NVM_VERSION=0.39.3 \
+NVM_VERSION=0.39.3
 
 RUN curl https://raw.githubusercontent.com/nvm-sh/nvm/v$NVM_VERSION/install.sh -o install_nvm.sh \
     && bash install_nvm.sh \
