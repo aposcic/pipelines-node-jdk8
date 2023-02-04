@@ -7,10 +7,11 @@ LABEL \
     org.opencontainers.image.title="aposcic/pipelines-node-jdk8" \
     org.opencontainers.image.description="Bitbucket Pipelines image with Node.js and OpenJDK 8"
 
-# Install curl and OpenJDK 8
+# Install curl, git and OpenJDK 8
 RUN apt-get update \
     && apt-get install -y \
         curl \
+        git \
         openjdk-8-jdk-headless \
     && rm -rf /var/lib/apt/lists/*
 
